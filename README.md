@@ -42,14 +42,10 @@ conda activate seq
 pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
 
 # install nvidia apex
-git clone https://github.com/NVIDIA/apex.git
-cd apex
-git checkout 22.03
-pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
-cd ..
+pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" git+https://github.com/NVIDIA/apex.git@22.03
 
 # install apex
-pip install -r requirements.txt
+pip install -v -r requirements.txt
 ```
 
 ## 🪅 Dataset Preparation
@@ -64,7 +60,7 @@ You can use the following script to download and extract the Wikipedia dataset. 
 
 ```bash
 # go to the root directory
-cd Sequence Parallelism
+cd Sequence-Parallelism
 
 # create dataset workspace
 mkdir dataset && cd ./dataset
@@ -87,7 +83,7 @@ The following commands can be used to process the Wikipedia dataset. Many thanks
 
 ```bash
 # go to the root directory
-cd Sequence Parallelism
+cd Sequence-Parallelism
 
 # download vocab file
 mkdir vocab && cd ./vocab
