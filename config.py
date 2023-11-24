@@ -1,7 +1,7 @@
 from colossalai.amp import AMP_TYPE
 
-DATA_PATH = ''
-VOCAB_FILE_PATH = ''
+DATA_PATH = './dataset/processed/my-bert_text_sentence'
+VOCAB_FILE_PATH = './vocab/bert-large-uncased-vocab.txt'
 
 # hyper-parameters
 TRAIN_ITERS = 1000000

@@ -1,2 +1,7 @@
-colossalai
 torch >= 1.8.1
+numpy==1.20
+nltk
+pybind11
+tensorboard
+pre-commit
+colossalai @ git+https://github.com/hpcaitech/ColossalAI@v0.1.8
